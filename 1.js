@@ -5,23 +5,21 @@ $(function(){
 		this.timer1 = null;
 		this.timer2 = null;
 		this.timer3 = null;
+		this.timer4 = null; 
 	}
 	read.prototype={
 		constructor:read,
 		//出现书本
 		book:function(that){
-			this.timerx = null; 
-			
 			var _this=this;
 			var html=$('<img id="book2-1" src="img/read/book2.png"/>');
 			that.append(html);
 			html.stop().animate({width:344,height:258,left:66,bottom:54},1000,function(){
-				clearInterval(_this.timerx)
 				//html[0].style.transform='rotate(720deg)';//这个效果```
 				//当书本出现的时候，笔出现并慢慢变小，
 				_this.pen(that);				
 				if(!$('#write2-1-1')[0]){
-					_this.timerx=setTimeout(function(){
+					_this.timer4=setTimeout(function(){
 							//console.log($('#write2-1-1')[0])
 							if(!$('#write2-1-1')[0]){
 								_this.bg(that);
@@ -57,6 +55,7 @@ $(function(){
 					clearInterval(_this.timer1);
 					clearInterval(_this.timer2);
 					clearInterval(_this.timer3);
+					clearInterval(_this.timer4)
 				}
 			},16)
 			div.animate({width:117,height:106,left:0,bottom:9},1000,function(){
@@ -435,7 +434,7 @@ $(function(){
 					oGC.beginPath();
 					oGC.strokeStyle='#715aa9';
 					oGC.arc(14,110,12,0,n*Math.PI/180,false);
-					oGC.stroke();//这句话的位置
+					oGC.stroke();
 					oGC.closePath();
 					
 					oGC.beginPath();
