@@ -1079,6 +1079,13 @@ $(function(){
 				//console.log(arr[i].left,arr[i].bottom,arr[i].background)
 				div1.css({left:arr[i].left,bottom:arr[i].bottom,background:arr[i].background})
 			}
+			this.timer1=setInterval(function(){
+				if(!that.children().length){
+					clearInterval(_this.timer1)
+					clearInterval(_this.timer2)
+					return;
+				}
+			},16)
 			div.animate({left:50},500,function(){
 				div.append(img);
 				console.time(1)
