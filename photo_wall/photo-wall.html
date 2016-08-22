@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#photo{
+			width:800px;
+			height:400px;
+			margin:80px auto;
+		}
+		img{
+			float: left;
+		}
+		.btn{
+			background: rgb(0, 100, 0);
+			color: #fff;
+			width:100px;
+			margin:0 auto;
+			padding:10px 20px;
+			border-radius: 5px;
+			cursor:pointer
+		}
+		.btn:hover{
+			background:#003a64
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var ph=document.getElementById('photo');
+			for(var j=0;j<2;j++){
+				for(var i=1;i<26;i++){
+					var im=document.createElement('img')
+					im.src='img/'+i+'.jpg'
+					ph.appendChild(im);
+				}
+			}
+		}
+	</script>
+	<body>
+		<div id="photo">
+		</div>
+		<div class="btn">点击查看效果</div>
+	</body>
+</html>
