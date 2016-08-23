@@ -1,1 +1,63 @@
-window.onload=function(){function t(t){s[t].timer=null,clearTimeout(s[t].timer),s[t].style.transition="1s",s[t].onoff=!0,setTimeout(function(){s[t].style.transform="scale(0)",s[t].addEventListener("transitionend",function(){this.onoff&&(this.onoff=!1,this.style.transform="scale(1)",this.style.opacity=0,s[t].style.transition="",s[t].style.transform="rotateY(0deg) translatez(-"+500*Math.random()+"px)",setTimeout(function(){n++,console.log(n),s[t].style.transition="1s",s[t].style.opacity=1,s[t].style.transform="rotateY(-360deg) translatez(0px)",50==n&&(l=!0)},1e3))})},700*Math.random())}for(var e=document.getElementById("photo"),n=0,o=0;o<2;o++)for(var r=1;r<26;r++){var i=document.createElement("img");i.src="img/"+r+".jpg",e.appendChild(i)}var a=document.querySelector(".btn"),s=document.querySelectorAll("img"),l=!0;a.onclick=function(){if(l){l=!1,n=0;for(var e=0;e<s.length;e++)t(e)}}};
+window.onload=function(){
+	var imgWrap=document.getElementById("imgWrap");
+	var imgs=document.querySelectorAll("img");
+	var btn=document.querySelector(".btn");
+	var on=true;
+	btn.onclick=function(){
+		if(!on){
+			return;
+		}
+		on=false;
+		var num=0;
+		var num1=0;
+		for(var i=0;i<imgs.length;i++){
+			(function(i){
+				setTimeout(function(){
+					motion(imgs[i],'20ms',function(){
+						this.style.transform='scale(0)'
+					},function(){
+						motion(this,'1s',function(){
+							this.style.transform='scale(1)'
+							this.style.opacity=0;
+						},function(){
+							num++;
+							if(num==imgs.length){
+								ro();
+							}
+						})
+					})
+				},Math.random()*1000)
+			})(i)
+		}
+		function ro(){
+			for(var i=0;i<imgs.length;i++){
+				imgs[i].style.transition='';
+				imgs[i].style.transform='rotateY(0deg) translateZ(-'+Math.random()*500+'px)';
+				(function(i){
+					setTimeout(function(){
+						motion(imgs[i],'1s',function(){
+							this.style.transform='rotateY(-360deg) translateZ(0px)';
+							this.style.opacity=1;
+						},function(){
+							num1++;
+							if(num1==imgs.length){
+								on=true;
+							}
+						})
+					},Math.random()*1000)
+				})(i)
+			}
+		}
+	}
+	function motion(obj,time,fn,callBack){
+		obj.style.transition=time;
+		fn.call(obj);
+		var called=false;
+		obj.addEventListener('transitionend',function(){
+			if(!called){
+				callBack&&callBack.call(obj);
+				called=true;
+			}
+		})
+	}
+}
