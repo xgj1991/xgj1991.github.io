@@ -1,29 +1,29 @@
 body{
-		overflow: hidden;
-	}
-	#imgWrap{
-		width: 800px;
-		height: 400px;
-		margin: 80px auto;
-		perspective: 800px;
-	}
-	#imgWrap img{
-		width: 80px;
-		height: 80px;
-		float: left;
-	}
-	.btn{
-		background: rgb(0, 100, 0); 
-		color: white;
-		padding: 10px 20px; 
-		border-radius: 5px;
-		cursor: pointer;
-		margin:0 auto;
-		width:100px;
-		text-align:center;
-		font-family: "微软雅黑";
-		box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-	}
-	.btn:hover{
-		background: #003a64;
-	}
+	overflow: hidden;
+}
+#imgWrap{
+	width: 800px;
+	height: 400px;
+	margin: 80px auto;
+	perspective: 800px;
+}
+#imgWrap img{
+	width: 80px;
+	height: 80px;
+	float: left;
+}
+.btn{
+	background: rgb(0, 100, 0); 
+	color: white;
+	padding: 10px 20px; 
+	border-radius: 5px;
+	cursor: pointer;
+	margin:0 auto;
+	width:100px;
+	text-align:center;
+	font-family: "微软雅黑";
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+.btn:hover{
+	background: #003a64;
+}
