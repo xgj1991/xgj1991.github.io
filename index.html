@@ -1,151 +1,454 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<link rel="stylesheet" href="css/1.css" />
-		<link rel="stylesheet" href="css/2.css" />
-		<script src="js/jquery-1.11.1.js"></script>
-		<script src="js/1.js"></script>
-		<script src="js/2.js"></script>
-		<script src="js/mTween.js"></script>
-	</head>
-	<body>
-		<div id="nav">
-			<div id="main">
-				<div id="first">
-					<video id="vi1" autoplay src="img/home-play.webm"></video>
-					<video loop id="vi2" src="img/home-loop.webm"></video>
-				</div>
-				<section style="background: #cd3f42;">
-					<ul>
-						<li class="active">
-							<a href="javascript:;">
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-							</a>
-						</li>
-					</ul>
-					<div class='content'>
-						<div class="cl1">
-							<div>
-								<h3>Design</h3>
-								<p>Realizing solutions that are worth talking about. We craft a creative model that moves the needle.</p>
-							</div>
-							<div id="content2-1" class="acl"></div>
-						</div>
-						<div class="cl1">
-							<div>
-								<h3>Development</h3>
-								<p>Authoring custom web applications for total flexibility. We code bespoke for your individual project.</p>
-							</div>
-							<div id="content2-2" class="acl"></div>
-						</div>
-						<div class="cl1">
-							<div>
-								<h3>Strategy</h3>
-								<p>Crafting effective experiences that deliver results. We start by defining the path to success.</p>
-							</div>
-							<div id="content2-3" class="acl"></div>
-						</div>
-					</div>
-				</section>
-				<section style="background: #2b354a">
-					<ul>
-						<li class="active">
-							<a href="javascript:;">
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-							</a>
-						</li>
-					</ul>
-					<div class='content'>
-						<div class="cl1">
-							<div>
-								<h3>Startups & Apps</h3>
-								<p>We thrive on change and admire those behind it. We design creative solutions to unsolved problems.</p>
-							</div>
-							<div id="content3-1" class="acl"></div>
-						</div>
-						<div class="cl1">
-							<div>
-								<h3>Innovative Brands</h3>
-								<p>We believe your product and brand are inseparable. The key to your company’s success is in the hands of your users.</p>
-							</div>
-							<div id="content3-2" class="acl"></div>
-						</div>
-						<div class="cl1">
-							<div>
-								<h3>Industry Leaders</h3>
-								<p>We're inspired by companies that stay ahead of the game. The examples they've set motivate us.</p>
-							</div>
-							<div id="content3-3" class="acl"></div>
-						</div>
-					</div>
-				</section>
-				<section style="background: #69a566;">
-					<ul>
-						<li class="active">
-							<a href="javascript:;">
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-							</a>
-						</li>
-					</ul>
-					<div class='content'>
-						<div class="cl1">
-							<div>
-								<h3>Envisage</h3>
-								<p>We designed and developed a content-managed, responsive website for Envisage using a mobile-first process.</p>
-							</div>
-							<div id="content4-1" class="acl"></div>
-						</div>
-						<div class="cl1">
-							<div>
-								<h3>HardCandy</h3>
-								<p>We set out to design a website for Hard Candy's flagship Toronto location to bring the brand to Canada.</p>
-							</div>
-							<div id="content4-2" class="acl"></div>
-						</div>
-						<div class="cl1">
-							<div>
-								<h3>Tripixy</h3>
-								<p>From idea to launch, we partnered with this startup to create a social platform for sharing travel experiences.</p>
-							</div>
-							<div id="content4-3" class="acl"></div>
-						</div>
-					</div>
-				</section>
-				<section style="background: #0f96f2">
-					<div class='content'>
-						<div class="cl1">
-							<div>
-								<h3>Get in Touch</h3>
-								<p>It’s amazing what we can learn from each other with just a quick conversation.</p>
-							</div>
-							<div id="content5-1" class="acl"></div>
-						</div>
-					</div>
-				</section>
-			</div>
-		</div>
-	</body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <script type="text/javascript" src="https://appx/web-view.min.js"></script>
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+  <title>小C首席产品建议官邀约</title>
+
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    box-sizing: border-box;
+  }
+  html, body {
+    box-sizing: border-box;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+  *,*::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    /* padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top); */
+
+    /* padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom); */
+    
+  }
+
+  /* body {
+    overflow-y: auto;
+  } */
+
+  /*.head-nav-hide {
+    display: none;
+  }*/
+  .head-nav-show {
+   display: block;
+  }
+  .protocol-status-bar{
+    width: 100%;
+    height: 1.11rem;
+      background: #fff;
+  }
+  #head-nav {
+    height: .48rem;
+    padding-bottom: .21rem;
+    display: flex;
+    align-items: center;
+    padding-left: .23rem;
+    background: #fff;
+  }
+
+  #protocol-nav-bar {
+    position: fixed;
+    width: 100%;
+  }
+  #head-nav img {
+    width: .2rem;
+    height: .32rem;
+    margin-right: .24rem;
+  }
+  .nav-title {
+    font-size: .44rem;
+    font-family: PingFangSC;
+    font-weight: 800;
+    color: #000000;
+  }
+  .wrap{
+    margin-top: 1.8rem;
+    position: relative;
+    background: #59bc8a;
+  }
+  .image{
+    position: absolute;
+    width: 7.14rem;
+    height: 6.65rem;
+    top: .37rem;
+    left: .21rem;
+  }
+  .content-wrap{
+    padding: 3.51rem .36rem .71rem .36rem;
+  }
+  .content{
+    box-sizing: border-box;
+    padding-top: 3.2rem;
+    background: #FFF8D9;
+    border-radius: 3.39rem 3.39rem .47rem .47rem;
+    text-align: center;
+  }
+  .active-info{
+    padding: 0 .26rem;
+  }
+  .flex{
+    display: flex;
+    justify-content: center;
+  }
+  .item-title{
+    box-sizing: border-box;
+    height: .34rem;
+    background: #EB6100;
+    border: 1px solid #000000;
+    border-radius: .17rem;
+    font-size: .21rem;
+    line-height: .32rem;
+    padding: 0 .15rem;
+    text-align: center;
+    font-family: FZLTHJW;
+    font-weight: normal;
+    color: #FFFFFF;
+  }
+  .pdt53{
+    padding-top: .53rem;
+  }
+  .pdt25{
+    padding-top: .25rem;
+  }
+  .pdt47{
+    padding-top: .47rem;
+  }
+  .pdt45{
+    padding-top: .45rem;
+  }
+  .pdt48{
+    padding-top: .48rem;
+  }
+  .item-text{
+    padding-top: .18rem;
+    font-size: .21rem;
+    line-height: .25rem;
+    font-family: FZLTHJW;
+    font-weight: normal;
+    color: #000000;
+  }
+  .user-info{
+    margin-top: .5rem;
+    background: #fcf0b0;
+    padding: 0 .04rem;
+    padding-bottom: .48rem;
+    border-radius: 0 0 .47rem .47rem;
+  }
+  .user-border{
+    border-top: 2px dashed #000
+  }
+  .user-btn{
+    margin: 0 auto .27rem;
+    width: 1.74rem;
+    height: .71rem;
+  }
+  .user-input{
+    padding: .55rem .91rem .47rem .91rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .user-text{
+    padding-top: .33rem;
+    font-family: FZLTHJW;
+    font-weight: normal;
+    color: #000000;
+    font-size: .15rem;
+    line-height: .19rem;
+    text-align: left;
+  }
+  .user-privacy{
+    padding: 0 .91rem .35rem .91rem;
+    font-family: FZLTHJW;
+    font-weight: normal;
+    color: #000000;
+    font-size: .15rem;
+    line-height: .19rem;
+    text-align: left;
+    opacity: 0.8;
+  }
+  .input-wrap{
+    box-sizing: border-box;
+    padding-top: .17rem;
+    width: 2.32rem;
+    height: .45rem;
+    font-size: .23rem;
+    font-family: FZLTHJW;
+    font-weight: normal;
+    color: #000000;
+    line-height: .28rem;
+    display: flex;
+  }
+  .input-name{
+    width: .5rem;
+    flex-shrink: 0;
+  }
+  .input{
+    box-sizing: border-box;
+    border-radius: none;
+    width: 1.82rem;
+    background:none;
+    outline:none;
+    border:none;
+    /*border-bottom: 1px solid #000000;*/
+    padding-left: .1rem;
+    font-size: .2rem;
+  }
+  .input-border{
+    border-bottom: 1px solid #000000;
+  }
+  .interpretation{
+    padding-right: .59rem;
+    text-align: right;
+    font-size: .15rem;
+    font-family: FZLTHJW;
+    font-weight: normal;
+    color: #000000;
+    opacity: 0.8;
+  }
+  </style>
+</head>
+<body>
+	<div id="wrap" class="wrap">
+   <img class="image" src="./img/active.png"> 
+   <div class="content-wrap">
+     <div class="content">
+      <div class="active-info">
+        <div class="flex">
+          <div class="item-title">活动形式</div>
+        </div>
+         <div class="item-text">第一步：小C主厨机用户App登记活动参与意向；</div>
+         <div class="item-text">第二步：苏泊尔调研组工作人员，电话沟通确认；</div>
+         <div class="item-text">第三步：苏泊尔调研工作人员及产品经理入户，就小C主厨机产品的使用问题与用户进行面对面交流，并现场解疑答惑。</div>
+         <div class="flex pdt53">
+          <div class="item-title">报名时间</div>
+        </div>
+        <div class="item-text">10月22日-10月31日；</div>
+        <div class="flex pdt53">
+          <div class="item-title">回访入户时间</div>
+        </div>
+        <div class="item-text">10月30日9:00-12月31日21:00；</div>
+        <div class="item-text">回访沟通时长约90分钟；</div>
+        <div class="flex pdt47">
+          <div class="item-title">活动参与对象</div>
+        </div>
+        <div class="item-text">自主购买小C主厨机用户，并且使用产品时间满一个月以上；</div>
+        <div class="flex pdt48">
+          <div class="item-title">活动奖励</div>
+        </div>
+        <div class="item-text">入户调研完成后，苏泊尔用研组工作人员现场赠予600元现金红包。</div>
+      </div>
+      <div class="user-info">
+        <div class="user-border"></div>
+        <div class="flex pdt25">
+          <div class="item-title">您提供的个人信息将仅限用于本次活动之目的，具体如下：</div>
+        </div>
+        <div class="user-text">您提供的姓名、电话、性别、年龄、城市和地址将用于【小C首席产品建议官入户沟通交流活动，前期个人参与意愿的信息收集，便于苏泊尔用户研究组工作人员及时有效的联系到您】</div>
+        <div class="user-input">
+          <div class="input-wrap">
+            <div class="input-name">姓名</div>
+            <div class="input-content">
+              <input v-model="name" class="input">
+              <div class="input-border"></div>
+            </div>
+          </div>
+          <div class="input-wrap">
+            <div class="input-name">电话</div>
+            <div class="input-content">
+              <input v-model="phone" type="number" class="input">
+              <div class="input-border"></div>
+            </div>
+          </div>
+          <div class="input-wrap">
+            <div class="input-name">性别</div>
+            <div class="input-content">
+              <input v-model="sex" class="input">
+              <div class="input-border"></div>
+            </div>
+          </div>
+          <div class="input-wrap">
+            <div class="input-name">年龄</div>
+            <div class="input-content">
+              <input type="number" v-model="age" class="input">
+              <div class="input-border"></div>
+            </div>
+          </div>
+          <div class="input-wrap">
+            <div class="input-name">城市</div>
+            <div class="input-content">
+              <input v-model="city" class="input">
+              <div class="input-border"></div>
+            </div>
+          </div>
+          <div class="input-wrap">
+            <div class="input-name">地址</div>
+            <div class="input-content">
+              <input v-model="address" class="input">
+              <div class="input-border"></div>
+            </div>
+          </div>
+        </div>
+        <div class="user-privacy">我们尊重并保护您的个人信息，将严格按照<span class="jump">《苏泊尔小C App隐私保护声明》</span>规定收集，使用及保护您的个人信息</div>
+        <img class="user-btn" src="./img/btn.png" @click="sendData">
+        <!-- <div class="interpretation">*活动最终解释权归苏泊尔所有；</div> -->
+      </div>
+     </div>
+   </div>
+  </div>
+  <div id="protocol-nav-bar" class="head-nav-hide">
+    <div class="protocol-status-bar"></div>
+    <div id="head-nav">
+      <img class="icon-left" src="./img/icon_to_left.png" alt="">
+      <div class="nav-title">小C首席产品建议官邀约</div>
+    </div>
+  </div>
+  <script>
+    function getOrigin() {
+      return window.location.origin
+    }
+    var baseUrl = getOrigin()
+    var vue = new Vue({
+      el: '#wrap',
+      data: {
+        phone: '',
+        name: '',
+        sex: '',
+        age: '',
+        city: '',
+        address: ''
+      },
+      created() {
+        this.fnResize()
+      },
+      mounted() {
+        window.onresize = function () {
+          this.fnResize()
+        }
+      },
+      methods: {
+        fnResize () {
+          const whdef = 100 / 750
+          const wW = window.innerWidth
+          const rem = wW * whdef
+          document.documentElement.style.fontSize = rem + 'px'
+        },
+        navBack() {
+          console.log('aaa')
+          try {
+            if (my!== undefined) {
+              my.postMessage({'navback': '1'})
+              setTimeout(function() {
+                my.navigateBack()
+              }, 100)
+            }
+          } catch (error) {
+            console.log(error)
+          }
+        },
+        sendData () {
+          let that = this
+          if (!this.name) {
+            this.$toast('请填写姓名')
+            return
+          }
+          if (!this.phone) {
+            this.$toast('请填写电话')
+            return
+          }
+          if (!this.sex) {
+            this.$toast('请填写性别')
+            return
+          }
+          if (!this.age) {
+            this.$toast('请填写年龄')
+            return
+          }
+          if (!this.city) {
+            this.$toast('请填写城市')
+            return
+          }
+          if (!this.address) {
+            this.$toast('请填写地址')
+            return
+          }
+          if (this.phone.length !== 11) {
+            this.$toast('请填写正确的电话')
+            return
+          }
+          $.ajax({
+            type: 'GET',
+            url: baseUrl + '/supor-food-oss/foodTAdviceUser/addAdviceUser?adviceAddress='+that.address+'&adviceAge='+that.age+'&adviceCity='+that.city+'&adviceName='+that.name+'&advicePhone='+that.phone+'&adviceSex='+that.sex+'&adviceType=ADVICEUSER',
+            success: function(data){
+              if (data.status === 200) {
+                that.$toast('提交成功')
+                setTimeout(function() {
+                  that.navBack()
+                }, 1000)
+              } else {
+                that.$toast(data.message)
+              }
+            },
+            error: function(xhr, type){
+              that.$toast(JSON.stringify(xhr))
+            }
+          })
+        }
+      }
+    })
+    var headNav = document.querySelector('#protocol-nav-bar')
+    var navTitle = document.querySelector('.nav-title')
+    var img = document.querySelector('.icon-left')
+    var wrap = document.querySelector('.wrap')
+    var jump = document.querySelector('.jump')
+    jump.onclick = jumpTo
+    img.onclick = navTitle.onclick = navBack
+    function jumpTo () {
+      window.open('https://i.supor.com/supor-food-ui/protocol/protocol/index.html?agreement_type=USERPRIVACYAGREE')
+    }
+    function navBack() {
+      try {
+        console.log('navBack, log my')
+        console.log(my)
+        if (my!== undefined) {
+          my.postMessage({'navback': '1'})
+          setTimeout(function() {
+            my.navigateBack()
+          }, 100)
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    try {
+      if (my !== undefined) {
+        headNav.style.display = 'block'
+      }
+    } catch (error) {
+      headNav.style.display = 'none'
+      wrap.style['margin-top'] = 0
+    }
+  </script>
+</body>
 </html>
